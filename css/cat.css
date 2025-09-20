@@ -1,0 +1,29 @@
+.cat-logo {
+  width: 280px;
+  height: 280px;
+  background: url("../img/hero-image.png") no-repeat center/contain;
+  animation: catPulse 3s infinite ease-in-out, catFadeIn 2s ease-in-out;
+  margin: 0 auto;
+}
+
+/* Animação de pulsar */
+@keyframes catPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Animação de entrada */
+@keyframes catFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
