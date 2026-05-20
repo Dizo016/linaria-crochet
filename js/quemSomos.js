@@ -8,9 +8,6 @@ function typeWriter(element, text, speed = 100) {
       element.innerHTML += text.charAt(i);
       i++;
       setTimeout(type, speed);
-    } else {
-      // Manter o cursor piscando após terminar
-      element.style.borderRight = '3px solid ' + getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
     }
   }
   

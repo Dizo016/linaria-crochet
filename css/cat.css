@@ -1,29 +1,32 @@
 .cat-logo {
-  width: 280px;
-  height: 280px;
-  background: url("../img/hero-image.png") no-repeat center/contain;
-  animation: catPulse 3s infinite ease-in-out, catFadeIn 2s ease-in-out;
+  width: 300px;
+  height: 300px;
+  background: url("../img/hero-image.png") no-repeat center / contain;
+  animation: catPulse 4s ease-in-out infinite, catFadeIn 1s ease both;
   margin: 0 auto;
+  filter: drop-shadow(0 12px 32px rgba(155, 107, 181, 0.22));
 }
 
-/* Animação de pulsar */
 @keyframes catPulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
+  0%, 100% { transform: scale(1) translateY(0); }
+  50%       { transform: scale(1.04) translateY(-8px); }
+}
+
+@keyframes catFadeIn {
+  from { opacity: 0; transform: scale(0.82) translateY(16px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .cat-logo {
+    width: 220px;
+    height: 220px;
   }
 }
 
-/* Animação de entrada */
-@keyframes catFadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.85);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
+@media (max-width: 480px) {
+  .cat-logo {
+    width: 180px;
+    height: 180px;
   }
 }
